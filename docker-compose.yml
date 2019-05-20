@@ -2,11 +2,10 @@ version: '3'
 
 services:
   web:
-    image: yohny/swarmdemo
+    image: 127.0.0.1:5000/stackdemo
     build: .
     ports:
       - "8000:8000"
   redis:
     image: redis:alpine
-    volume: docker-redis-data
-    driver: nimble
+

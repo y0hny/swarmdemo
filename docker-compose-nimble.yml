@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  web:
+    image: yohny/swarmdemo
+    build: .
+    ports:
+      - "8000:8000"
+  redis:
+    image: redis:alpine
+    volumes:
+      - nimble-docker-test01:/data
+volumes:
+    nimble-docker-test01:
+      driver: nimble
+      driver_opts:
+        size: 1
+        folder: docker
+

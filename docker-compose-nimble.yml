@@ -2,7 +2,7 @@ version: '3'
 
 services:
   web:
-    image: yohny/swarmdemo
+          image: 127.0.0.1:5000/yohny/swarmdemo
     build: .
     ports:
       - "8000:8000"

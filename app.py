@@ -9,7 +9,7 @@ redis = Redis(host='redis', port=6379)
 def hello():
     count = redis.incr('hits')
     hostname = socket.gethostname()
-    return 'Hello World! I have been seen {} times.\n'.format(count) + "Running on host" + hostname
+    return 'Hello World 2! I have been seen {} times.\n'.format(count) + "Running on host" + hostname
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8000, debug=True)
